@@ -10,6 +10,8 @@ armake
 
 A cross-platform, open-source C implementation of Arma modding tools (PAA conversion, binarization & rapification, PBO packing, key generation and signing). It aims to provide a complete reimplementation of the entire process, but is able to use the official BI tools on Windows for building P3Ds if it can find them, as P3D conversion is still incomplete (and most likely will never be fully complete). Terrains and RTMs are not supported at the moment (I recommend binarizing RTMs once and then using the binarized version in your repo for now).
 
+> Note: This repository is a fork maintained by MBarkerUK containing a small, focused patch to fix build and linker issues in the original project. The fork keeps the original functionality and receives CI plus dependency updates here. If you want the upstream project to adopt this change, open an issue or PR on the original repo — otherwise this fork will continue to be maintained independently.
+
 
 ### Features
 
