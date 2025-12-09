@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential flex bison pkg-config libssl-dev
+          sudo apt-get install -y build-essential flex bison pkg-config libssl-dev imagemagick
 
       - name: Build
         run: |
