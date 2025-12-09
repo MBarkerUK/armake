@@ -92,7 +92,8 @@ Usage:
     armake img2paa [-f] [-z] [-t <paatype>] <source> <target>
     armake (-h | --help)
     armake (-v | --version)
-````markdown
+```
+
 # armake — MBarkerUK fork
 
 [![CI](https://github.com/MBarkerUK/armake/actions/workflows/ci.yml/badge.svg)](https://github.com/MBarkerUK/armake/actions/workflows/ci.yml)
@@ -142,4 +143,4 @@ License
 
 This project is distributed under the same license as the original (GPLv2 or later). See `LICENSE`.
 
-````
+```
