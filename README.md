@@ -92,39 +92,54 @@ Usage:
     armake img2paa [-f] [-z] [-t <paatype>] <source> <target>
     armake (-h | --help)
     armake (-v | --version)
+````markdown
+# armake — MBarkerUK fork
+
+[![CI](https://github.com/MBarkerUK/armake/actions/workflows/ci.yml/badge.svg)](https://github.com/MBarkerUK/armake/actions/workflows/ci.yml)
+
+This repository is a fork of the original `armake` project. The original project and full documentation remain available at: https://github.com/KoffeinFlummi/armake
+
+This fork is maintained by MBarkerUK to keep a small, focused set of fixes and modern CI in place for reliable builds.
+
+What this fork provides (summary)
+
+- Build fixes:
+  - Converted Makefile recipes to use tab-prefixed recipes (fixes "missing separator" on some systems).
+  - Moved a few globals out of headers into a single `src/globals.c` to avoid multiple-definition linker errors.
+  - Added missing standard includes so compilation is robust across toolchains.
+- CI & maintenance:
+  - GitHub Actions workflow to build and run the bundled tests on Ubuntu.
+  - Dependabot configuration to keep GitHub Actions up to date.
+- Release: tagged as `v0.6.3-patched` in this fork for reference.
+
+If you want the upstream project to accept these changes, open an issue or PR on the original repository. For now, this fork will be kept up-to-date here.
+
+Quick start
+
+```
+$ make
+$ ./test/run.sh
 ```
 
-See `armake --help` for more.
+If you want to install system dependencies (Ubuntu/Debian):
 
+```
+$ sudo apt-get update
+$ sudo apt-get install build-essential flex bison pkg-config libssl-dev imagemagick
+```
 
-### Thanks
+Changelog / Patch details
 
-- [Mikero](https://dev.withsix.com/projects/mikero-pbodll) for his great documentation of the various file formats used.
-- [T_D](https://github.com/Braini01) for great documentation, lots of pointers and even some code contributions.
-- [jonpas](https://github.com/jonpas) for all kinds of help with development and testing.
-- [kju](https://forums.bistudio.com/user/768005-kju/) for some pointers and "PR work".
-- [Glowbal](https://github.com/Glowbal) for the name.
-- [4d4a5852](https://github.com/4d4a5852) for his work with [a3lib](https://github.com/4d4a5852/a3lib.py).
+- See the `v0.6.3-patched` tag and recent commits for the exact diffs. The main changes are small and targeted to fix build/linker problems and add CI.
 
+More details and full original README
 
-### Used Libraries
+This README intentionally keeps a short summary. For full documentation and feature details, see the original project's README:
 
-- [MiniLZO](http://www.oberhumer.com/opensource/lzo/)
-- [STB's image libraries](https://github.com/nothings/stb)
-- [Paul E. Jones's SHA-1 implementation](https://www.packetizer.com/security/sha1/)
+https://github.com/KoffeinFlummi/armake/blob/master/README.md
 
+License
 
-### Disclaimer
+This project is distributed under the same license as the original (GPLv2 or later). See `LICENSE`.
 
-This isn't official BI software. As such, it may not compile certain addons correctly or lag behind BI when new file format versions are introduced. As stated in the GPL, this software is provided without any warranty, so use at your own risk.
-
-
----
-
-<p align="center">
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WQ55N7RKXUCF8">
-        <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" style="max-width:100%;">
-    </a>
-    <br>
-    <b>BTC</b> 18bKjgqZ6E6sQFPNQL4SnCFNB9pLN2PJRk
-</p>
+````
