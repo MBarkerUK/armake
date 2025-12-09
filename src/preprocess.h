@@ -20,6 +20,7 @@
 
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -60,7 +61,7 @@ struct constant_stack {
 };
 
 
-char include_stack[MAXINCLUDES][1024];
+extern char include_stack[MAXINCLUDES][1024];
 
 
 struct constants *constants_init();
